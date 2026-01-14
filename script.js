@@ -20,6 +20,7 @@ const characters = [
 
 let namesList = document.getElementById("names-list");
 
+console.log("Full List of Names:");
 characters.forEach(character =>{
   console.log(character.name)
   namesList.innerHTML += `<li>${character.name}</li>\n`// += shortcut for append, backtick ${} for f-string
@@ -27,6 +28,15 @@ characters.forEach(character =>{
 
 
 // 2. Filter the characters array to find only those characters whose age property is less than 40. Log each filtered character's name to the console. Then, dynamically create <li> elements for each filtered character and append them to the HTML unordered list element with the id "young-characters-list".
+
+let youngCharacters = document.getElementById("young-characters-list");
+
+console.log("Filter by age:");
+characters.forEach(character =>{
+  if (character.age < 40){
+    console.log(character.name)}
+    youngCharacters.innerHTML += `<li>${character.name}</li>\n`
+});
 
 // 3. Build a reusable function that accepts an array of character objects as a parameter. Inside the function, iterate through the array and extract each character's name property. Dynamically generate <li> elements for each name and append them to a target HTML list element. Call this function with the characters array and render the results in the unordered list with id "function-list".
 
