@@ -85,9 +85,9 @@ function nameCheck(characterArray) {
 			passArray.push(character)
 		}
 		else {
-			console.error(`The object with ID: ${character.id} is missing the age property.`)
-			errorList.innerHTML += `<p class='error-message'>The object with ID: ${character.id} is missing the age property.</p>`
-			brokenArrayErrors.innerHTML += `<p class='error-message'>The object with ID: ${character.id} is missing the age property.</p>`
+			console.error(`The object with ID: ${character.id} is missing the name property.`)
+			errorList.innerHTML += `<p class='error-message'>The object with ID: ${character.id} is missing the name property.</p>`
+			brokenArrayErrors.innerHTML += `<p class='error-message'>The object with ID: ${character.id} is missing the name property.</p>`
 			errorArray.push(character)
 		}
 	})
